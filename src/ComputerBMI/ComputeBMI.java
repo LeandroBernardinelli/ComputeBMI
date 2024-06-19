@@ -6,11 +6,14 @@ import java.util.Scanner;
 
 public class ComputeBMI {
     public static void main(String[] args){
-Scanner sc = new Scanner(System.in);
-double peso = sc.nextDouble();
-double altura = sc.nextDouble();
-double imc = peso / Math.abs(altura * altura);
+Scanner in = new Scanner(System.in);
+        System.out.println("Digite o peso em libras");
+double peso = in.nextDouble();
+        System.out.println("Insira a altura em polegadas");
+double altura = in.nextDouble();
+double imc = (peso/Math.pow(altura,2))*703;
+        System.out.println("Seu Índice de Massa Corporal é"+Math.round(imc));
  
-        System.out.println(imc);
+        
         }
 }
